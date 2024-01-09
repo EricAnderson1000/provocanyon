@@ -4,7 +4,7 @@
     "version": "5.0.4",
     "license": "MIT",
     "scripts": {
-        "deploy": "cp src/*.html /dist && cd dist && aws s3 cp . s3://www.provocanyon.info --recursive"
+        "deploy": "cp ./src/html/* ./dist && cd dist && aws s3 cp . s3://www.provocanyon.info --recursive && aws s3 cp . s3://provocanyon.info --recursive"
     },
     "description": "Provo Canyon Infomation Site",
     "keywords": [
