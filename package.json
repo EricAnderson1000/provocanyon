@@ -1,0 +1,35 @@
+{
+    "title": "Provo Canyon",
+    "name": "provo-canyon-info",
+    "version": "5.0.4",
+    "license": "MIT",
+    "scripts": {
+        "deploy": "cp src/*.html /dist && cd dist && aws s3 cp . s3://www.provocanyon.info --recursive"
+    },
+    "description": "Provo Canyon Infomation Site",
+    "keywords": [
+        "css",
+        "sass",
+        "html",
+        "responsive",
+        "theme",
+        "template"
+    ],
+    "homepage": "provocanyon.info",
+    "bugs": {
+        "url": "https://github.com/EricAnderson1000/provocanyon",
+        "email": "provocanyoninfo@gmail.com"
+    },
+    "author": "Eric Anderson",
+    "contributors": [
+        "Jonathan Clegg (https://mrclegg.com/)"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/EricAnderson1000/provocanyon"
+    },
+    "dependencies": {
+    },
+    "devDependencies": {
+    }
+}
