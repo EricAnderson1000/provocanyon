@@ -39,28 +39,57 @@
   gtag('config', 'G-VCRLPZP5F8');
 </script>
 
-<body SCROLL="auto" bgcolor="#000000" TOPMARGIN="0" LEFTMARGIN="0">
+<script>
+  let enlarged = false;
+  function toggleEnlargeImage(image) {
+      if (!enlarged) {
+        image.style.transform = "scale(4)";
+        image.style.transition = "transform 0.25s ease";
+        enlarged = true;
+      }
+      else {
+        image.style.transform = "scale(1)";
+        image.style.transition = "transform 0.25s ease";
+        enlarged = false;
+      }
+    }
 
+  let enlargedDiv = false;
+  function toggleEnlargeDiv(div) {
+    const image = div.childNodes['img'];
+      if (!enlarged) {
+        image.style.transform = "scale(4)";
+        image.style.transition = "transform 0.25s ease";
+        enlargedDiv = true;
+      }
+      else {
+        image.style.transform = "scale(1)";
+        image.style.transition = "transform 0.25s ease";
+        enlargedDiv = false;
+      }
+    }
+</script>
 
-  <div id="cameras">
+<body scroll="auto" bgcolor="#000000" TOPMARGIN="0" LEFTMARGIN="0">
 
-    <div id="idElement1321" style="
+  <div id="camerasTitle" style="
         position: absolute;
         top: 80px;
         left: 20px;
         width: 620px;
-        height: 37px;
-      ">
+        height: 37px; ">
       <table border="0" cellspacing="0" cellpadding="0" width="620">
         <tr valign="top">
           <td>
             <div align="left">
-              <font class="Arial-16pxn"><u>UDOT Cameras - Provo Canyon/US 189</u></font>
+              <font class="Arial-16pxn">UDOT Cameras</font>
             </div>
           </td>
         </tr>
       </table>
     </div>
+
+  <div id="cameras" >
 
     <div id="idElement2" style="
         position: absolute;
@@ -69,7 +98,7 @@
         width: 230px;
         height: 140px;
       ">
-      <img src="http://udottraffic.utah.gov/1_devices/aux15437.jpeg" />
+      <img src="http://udottraffic.utah.gov/1_devices/aux15437.jpeg" onclick="javascript:toggleEnlargeImage(this);"/>
     </div>
 
     <div id="idElement211" style="
@@ -79,7 +108,7 @@
         width: 230px;
         height: 140px;
       ">
-      <img src="http://udottraffic.utah.gov/1_devices/aux17983.jpeg" />
+      <img src="http://udottraffic.utah.gov/1_devices/aux17983.jpeg"  onclick="javascript:toggleEnlargeImage(this);"/>
     </div>
 
     <div id="idElement21121" style="
@@ -88,7 +117,8 @@
         left: 690px;
         width: 230px;
         height: 140px;
-      ">
+      "
+      onclick="javascript:toggleEnlargeDiv(this);">
       <img src="http://udottraffic.utah.gov/1_devices/aux17379.jpeg" />
     </div>
 
@@ -99,7 +129,7 @@
         width: 230px;
         height: 140px;
       ">
-      <img src="http://udottraffic.utah.gov/1_devices/aux16645.jpeg" />
+      <img src="http://udottraffic.utah.gov/1_devices/aux16645.jpeg"  onclick="javascript:toggleEnlargeImage(this);"/>
     </div>
 
     <div id="idElement6" style="
@@ -626,6 +656,8 @@
     </div>
   </div>
 
+  <!-- Right Side Section -->
+
   <div id="YoutTubeChannel" style="position: absolute; top: 80px; left: 1700px; width: 620px; height: 37px; ">
     <iframe width="560" height="315"
       src="https://www.youtube.com/embed/videoseries?si=4lgSbuVokAyFvlxl&amp;list=PLufweyjRV6Rr19ZuaGJLTMo1M1pQOOxFG"
@@ -640,12 +672,48 @@
       <tr valign="top">
         <td>
           <div align="left">
-            <img src="https://udottraffic.utah.gov/rwischarts/rwa.jpg" height="700px" width="570px">
+            <a href="https://udottraffic.utah.gov/roadweatheralert" target="_blank"><img src="https://udottraffic.utah.gov/rwischarts/rwa.jpg" height="700px" width="570px"></a>
           </div>
         </td>
       </tr>
     </table>
   </div>
+
+  <div id="Heber Airport Title" style="position: absolute; top: 1200; left: 1700px; width: 620px; height: 37px; z-index: 10; ">
+    <table border="0" cellspacing="0" cellpadding="0" width="620">
+      <tr valign="top">
+        <td>
+          <div align="left">
+            <div align="left">
+              <font class="Arial-13pxn">Heber Valley Airport</font>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="Heber Airport" style="position: absolute; top: 1120; left: 1700px; width: 620px; height: 37px; ">
+    <table border="0" cellspacing="0" cellpadding="0" width="620">
+      <tr valign="top">
+        <td>
+          <div align="left">
+            <a data-toggle="modal" data-target="#photoModalAirportInfo"
+              data-header="Weather South View, Real Time Airport Camera"
+              data-first-image-url="https://ok3.aero/webcam_images/WeatherS.jpg?nocache=1704846725"
+              data-second-image-url="https://ok3.aero/img/clear_day_images/WeatherS.jpg?nocache=1704846725"
+              style="cursor: pointer;">
+              <img src="https://ok3.aero/webcam_images/WeatherS.jpg?nocache=1704846726645" height="700px" width="570px" alt="Weather South View, Real Time Airport Camera"></a>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+
+
+  <!--- Links Section  -->
 
   <div id="Links">
 
